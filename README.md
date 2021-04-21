@@ -1,2 +1,5 @@
 # udacity-project3
-Project: "Where Am I?". Udacity open source Robotics Software Engineer Nano Degree Program
+### Udacity's nano degree program: Robotics Software Engineering  
+**Project Title**: Where Am I?  
+**Project Goals**: 
+- Robot Localizaton using Adaptive Monte Carlo Localization Algorithms..
