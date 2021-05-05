@@ -13,7 +13,9 @@ $ sudo apt-get install ros-kinetic-move-base
 $ sudo apt-get install ros-kinetic-amcl
 ```
 - Install libignition-mat2-dev, protobuf-compiler
-  - `sudo apt-get install libignition-math2-dev protobuf-compiler`
+  - `$ sudo apt-get install libignition-math2-dev protobuf-compiler`
+- Update
+  - `$ sudo apt-get update && apt-get upgrade -y`
 
 ### Action
 - Add the plugin to `<yourworld>.world` file
@@ -26,6 +28,7 @@ $ sudo apt-get install ros-kinetic-amcl
 - Edit protobuf-compiler cmake document:
   - `to be updated ...`
 - Open terminal
+  - `$ cd ~/catkin_ws`
   - `$ source devel/setup.bash`
   - `$ GAZEBO_PLUGIN_PATH=PATH/TO/collision_map_creator_plugin/build/ gazebo src/pgm_map_creator/world/<yourworld>.world`
  
@@ -35,7 +38,7 @@ $ sudo apt-get install ros-kinetic-amcl
 
 - Open another terminal
   - `$ source devel/setup.bash`
-  - `roslaunch pgm_map_creator request_publisher.launch`
+  - `$ roslaunch pgm_map_creator request_publisher.launch`
 
 - Map will be generated under `/src/pgm_map_creator/maps`
   - If needed, you can adjust the image boundaries (xmin, xmax, ymin, ymax) by editing `src/pgm_map_creator/launch/request_publisher.launch` as shown below:
@@ -51,3 +54,21 @@ $ sudo apt-get install ros-kinetic-amcl
     <arg name="resolution" default="0.01" />
     ...
     ```
+- Open map
+  - `$ cd src/pgm_map_creator/maps`
+  - `$ eog map.pgm`
+- Create yaml file
+  - `$ cd src/<yourpackage>/src/maps`
+  - `$ touch map.yaml`
+  - `$ gedit map.yaml`
+  - Paste the following to map.yaml
+    ```
+    image: <YOUR MAP NAME>
+    resolution: 0.01
+    origin: [-20.0, -20.0, 0.0]
+    occupied_thresh: 0.65
+    free_thresh: 0.196
+    negate: 0
+    ```
+- launch Adaptive Monte Carlo Localization (amcl) package [look for more detail](http://wiki.ros.org/amcl)
+  - ``
