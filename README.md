@@ -17,7 +17,7 @@ $ sudo apt-get install ros-kinetic-amcl
 - Update
   - `$ sudo apt-get update && apt-get upgrade -y`
 
-### Action
+### Setup
 - Add the plugin to `<yourworld>.world` file
 ```
     ...
@@ -71,4 +71,9 @@ $ sudo apt-get install ros-kinetic-amcl
     negate: 0
     ```
 - launch Adaptive Monte Carlo Localization (amcl) package [look for more detail](http://wiki.ros.org/amcl)
-  - ``
+
+### Action
+- Open a terminal
+  - `roslaunch <yourpackage> <yourworld>.world`
+- Open another terminal
+  - `roslaunch <yourpackage> amcl.launch`
