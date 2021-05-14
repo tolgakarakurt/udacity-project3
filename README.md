@@ -74,6 +74,6 @@ $ sudo apt-get install ros-kinetic-amcl
 
 ### Action
 - Open a terminal
-  - `roslaunch <yourpackage> <yourworld>.world`
+  - `roslaunch <yourpackage> <yourworld>.launch`
 - Open another terminal
   - `roslaunch <yourpackage> amcl.launch`
