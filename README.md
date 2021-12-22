@@ -10,9 +10,6 @@
 mkdir -p $HOME/<user_workspace>/src
 cd $HOME/<user_workspace>/src
 git clone git@github.com:tolgakarakurt/udacity-project3.git
-catkin_make
-roslaunch my_robot world.launch
-roslaunch my_robot amcl.launch
 ```
 ### Requirements
 #### Dependencies:
@@ -82,11 +79,15 @@ $ sudo apt-get install ros-kinetic-amcl
     ```
 - launch Adaptive Monte Carlo Localization (amcl) package [look for more detail](http://wiki.ros.org/amcl)
 
+### Build  
+- Open a terminal  
+- `catkin_make`
+
 ### Action
 - Open a terminal
-  - `roslaunch <yourpackage> <yourworld>.launch`
+  - `roslaunch my_robot world.launch`
 - Open another terminal
-  - `roslaunch <yourpackage> amcl.launch`
+  - `roslaunch my_robot amcl.launch`
 
   **Package Directory**
 ```
