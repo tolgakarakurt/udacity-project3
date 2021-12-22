@@ -77,3 +77,36 @@ $ sudo apt-get install ros-kinetic-amcl
   - `roslaunch <yourpackage> <yourworld>.launch`
 - Open another terminal
   - `roslaunch <yourpackage> amcl.launch`
+
+  **Package Directory**
+```
+TKProject3                         # Where am I Project
+├── my_robot                       # my_robot package   
+│   ├── config                     # map configuration files   
+│   │   ├── base_local_planner_params.yaml
+│   │   ├── costmap_common_params.yaml    
+│   │   ├── global_costmap_params.yaml
+│   │   ├── local_costmap_params.yaml              
+│   ├── launch                     # launch folder for launch files   
+│   │   ├── amcl.launch
+│   │   ├── robot_description.launch
+│   │   ├── world.launch
+│   ├── maps                       # maps folder for amcl
+│   │   ├── map.pgm
+│   │   ├── map.yaml
+│   ├── meshes                     # meshes folder for sensors
+│   │   ├── hokuyo.dae
+│   ├── urdf                       # urdf folder for xarco files
+│   │   ├── my_robot.gazebo
+│   │   ├── my_robot.xacro
+│   ├── rviz                       # rviz saved configuration file
+│   │   ├── default.rviz
+│   ├── urdf                       # robot urdf file
+│   │   ├── my_robot.gazebo
+│   │   ├── my_robot.xacro
+│   ├── worlds                      # world folder for world files
+│   │   ├── myoffice.world
+│   ├── CMakeLists.txt             # compiler instructions
+│   ├── package.xml                # package info              
+└──   
+```
