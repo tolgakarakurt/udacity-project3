@@ -3,7 +3,17 @@
 **Project Title**: Where Am I?  
 **Project Goals**: 
 - Robot Localizaton using Adaptive Monte Carlo Localization Algorithms.
-- Full video: [amcl](https://drive.google.com/file/d/1rBBIEGOBaFs0X2khh_7_DwwtU8DF4wZh/view?usp=sharing)
+- Full video: [amcl](https://drive.google.com/file/d/1rBBIEGOBaFs0X2khh_7_DwwtU8DF4wZh/view?usp=sharing)  
+
+**Setup and pull**
+```
+mkdir -p $HOME/<user_workspace>/src
+cd $HOME/<user_workspace>/src
+git clone git@github.com:tolgakarakurt/udacity-project3.git
+catkin_make
+roslaunch my_robot world.launch
+roslaunch my_robot amcl.launch
+```
 ### Requirements
 #### Dependencies:
 ```
