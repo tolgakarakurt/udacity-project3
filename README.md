@@ -89,7 +89,7 @@ $ sudo apt-get install ros-kinetic-amcl
 - Open another terminal
   - `roslaunch my_robot amcl.launch`
 
-  **Package Directory**
+### Package Directory
 ```
 TKProject3                         # Where am I Project
 ├── my_robot                       # my_robot package   
